@@ -10,7 +10,7 @@ The demo creating a test environment that includes Jenkins, InfluxDB and Grafana
 
 ### Configuration
 
-Usefull stuff to add and configure to Jenkins:
+Usefull stuff to add and configure in Jenkins:
 - Changes to software project fetched from version control
 - Publish HTML test reports
 - Publish JUnit test result
@@ -30,4 +30,4 @@ Designed by Mikko Drocan.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
