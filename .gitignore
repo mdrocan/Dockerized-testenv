@@ -1,0 +1,7 @@
+# OSX
+.DS_Store
+
+# Created volumes
+grafana_volume
+influxdb_volume
+jenkins_home

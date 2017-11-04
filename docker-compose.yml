@@ -1,0 +1,41 @@
+version: '2'
+
+services:
+
+  influxdb:
+    image: influxdb/influxdb
+    volumes:
+     - ./influxdb_volume/:/var/lib/influxdb/:rw
+    ports:
+     - "8083:8083"
+     - "8086:8086"
+    expose:
+     - "8090"
+     - "8099"
+    environment:
+      PRE_CREATE_DB: testdb
+    networks: 
+     - testnet
+  
+  grafana:
+    image: grafana/grafana
+    volumes:
+     - ./grafana_volume/:/var/lib/grafana/:rw
+    ports: 
+     - '3000:3000'
+    networks:
+     - testnet
+
+  jenkins:
+     build: jenkins
+     ports:
+     - '8080:8080'
+     - '50000:50000'
+     - '4444:4444'
+     volumes:
+     - ./jenkins_home/:/var/jenkins_home:rw
+     networks:
+     - testnet
+
+networks: 
+  testnet:
