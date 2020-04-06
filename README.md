@@ -1,26 +1,23 @@
-# An example of a Dockerized test environment
+# An simple example of a dockerized test environment
 
 ### About
 
-The demo creating a test environment that includes Jenkins, InfluxDB and Grafana, all running on Docker. Its original purpose was to create a test environment for web application testing and creating the necessary test reports. The solution has been tested and designed together with the following project: https://github.com/mdrocan/Protractor-tests-for-Jenkins
+Sample test environment running on Docker. Integrated services Jenkins, InfluxDB and Grafana.
 
 The Jenkins Debian has some stuff that could be removed and thus simplify the environment.
 Could be a future improvement.
 
+
 ### Installation
 
-- Use docker-compose to build it and start it up.
+- Install Docker and docker-compose.
+- Use docker-compose to build the environment and start it up.
+
 
 ### Configuration
 
-Usefull stuff to add and configure in Jenkins:
-- Changes to software project fetched from version control
-- Publish HTML test reports
-- Publish JUnit test result
-- Publish test data to InfluxDb
+Minimal configuration done, ie. visibility between services.
 
-Configurations via ansible or anything else is not done.
-Most likely a future improvement.
 
 ## Author
 
